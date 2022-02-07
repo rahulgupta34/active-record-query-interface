@@ -7,6 +7,8 @@ ruby "3.1.0"
 
   gem 'jquery-rails'
   
+  gem 'pry', '~> 0.14.1'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
 

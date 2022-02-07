@@ -1,0 +1,33 @@
+        
+            
+        <%= form_tag("/email/home", method: "post") do %>
+        <div class="container">
+            <div class="row justify-content-center mt-2">
+               <div class="col-lg-3">
+                    <div class="form-group">
+                        <%= label_tag :email, " Enter Your Email " %>
+                        <%= text_field_tag :email %>
+                    </div>
+                </div>
+            </div>
+
+             <div class="row justify-content-center mt-2">
+                <div class="col-lg-3">
+                    <div class="form-group">
+                        <%= submit_tag("Submit") %>
+                    </div>
+                </div>
+             </div>
+                    <%= link_to "Back", root_path, {:style => "margin-left: 420px", :class => "btn btn-success mt-3"} %>
+        </div>
+        <% end %>
+    <% if params[:exist] != nil %>
+        <% if params[:exist] == "true" %>
+        
+            <p class="text-center text-danger">Email Exists</p>
+         <% else %>
+         
+         <p class="text-center text-danger">Email Not Found</p>
+        <% end %>
+
+    <% end %>

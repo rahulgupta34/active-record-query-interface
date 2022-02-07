@@ -6,4 +6,9 @@ class Employee < ApplicationRecord
     validates :no_of_order, presence: true, numericality: true
     validates :full_time_available, presence: true
     validates :salary, presence: true, numericality: true
+
+
+    scope :no_of_order, -> { order(no_of_order: :desc) }
+
+
 end

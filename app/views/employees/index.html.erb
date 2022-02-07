@@ -4,6 +4,14 @@
 
         <%= link_to " Add Employee ", new_employee_path, class:"btn btn-primary m-1" %>
 
+         <%= link_to " Check Email ", "/email", class:"btn btn-info m-1" %>
+
+        <%= link_to " Check conditions ", "/conditions", class:"btn btn-info m-1" %>
+
+        <%= link_to "overriding condtions", "/conditions/orverride", class:"btn btn-warning m-1" %>
+        
+        <%= link_to "Btaches", "/batches/data", class:"btn btn-danger" %>
+
         <table class="table table-bordered border-primary">
             <thead>
                 <tr class="text-center">
@@ -31,10 +39,11 @@
                     <td><%= employee.full_time_available %></td>
                     <td><%= employee.salary %></td>
                     <td><%= link_to "Show", employee_path(employee.id), class:"btn btn-success" %></td>
-                    <td><%= link_to "Edit","sjhjk", class:"btn btn-warning" %></td>
-                    <td><%= link_to "Delete",employee_path(employee.id), data:{turbo_method: :delete, turbo_confirm: "Are Your Sure Want To Delete"}, class:"btn btn-danger" %></td>
+                    <td><%= link_to "Edit", edit_employee_path(employee.id), class:"btn btn-warning" %></td>
+                    <td><%= link_to "Delete", employee_path(employee.id), data:{turbo_method: :delete, turbo_confirm: "Are Your Sure Want To Delete"}, class:"btn btn-danger" %></td>
                 </tr>
                 <% end %>
             </tbody>
         </table>
     </div>
+    
