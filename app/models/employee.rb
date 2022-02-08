@@ -4,7 +4,7 @@ class Employee < ApplicationRecord
     validates :age, presence: true, numericality: true
     validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
     validates :no_of_order, presence: true, numericality: true
-    validates :full_time_available, presence: true
+    validates :full_time_available, inclusion: { in: [ true, false ] }
     validates :salary, presence: true, numericality: true
 
 

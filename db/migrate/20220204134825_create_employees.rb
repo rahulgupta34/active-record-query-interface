@@ -6,7 +6,7 @@ class CreateEmployees < ActiveRecord::Migration[7.0]
       t.integer :age
       t.string :email
       t.integer :no_of_order
-      t.string :full_time_available
+      t.boolean :full_time_available
       t.integer :salary
 
       t.timestamps

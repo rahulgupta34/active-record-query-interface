@@ -27,7 +27,7 @@ class EmployeesController < ApplicationController
   def update
     @employee = Employee.find(params[:id])
     if @employee.update(employee_params)
-      # binding.pry
+      
       redirect_to root_path
     else
       render :edit, status: :unprocessable_entity

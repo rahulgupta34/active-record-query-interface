@@ -1,0 +1,84 @@
+<div class="container">
+
+<%= form_with model: @employee  do |form| %>
+
+            <% @employee.errors.each do |message| %>
+               <p class="text-danger text-center"> <%= message.type %> </p>
+            <% end %>
+ 
+        <div class="row justify-content-center">
+        <%= form.hidden_field :lock_version %>
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <%= form.label :first_name, "First Name" %>
+                    <%= form.text_field :first_name, placeholder: "Enter Your First Name", class:"form-control mt-2", autocomplete: :off %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <%= form.label :last_name, "Last Name " %>
+                    <%= form.text_field :last_name, placeholder: "Enter Your Last Name", class:"form-control mt-2", autocomplete: :off %>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row justify-content-center mt-2">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <%= form.label :age, "Age " %>
+                    <%= form.number_field :age, placeholder: "Enter Your Age ", class:"form-control mt-2", autocomplete: :off %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <%= form.label :email, "Email" %>
+                    <%= form.email_field :email, placeholder: "Enter Your Email ", class:"form-control mt-2", autocomplete: :off %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <%= form.label :no_of_order, "No Of Order" %>
+                    <%= form.select :no_of_order, ['select',1,2,3,4,5,6,7,8,9,10], {}, class: "form-control mt-2" %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <%= form.label :full_time_available, "Full Time Available" %>
+                    <%= form.select :full_time_available, ['select',"Yes","No"], {}, class: "form-control mt-2" %>
+                </div>
+            </div>
+        </div>
+
+         <div class="row justify-content-center mt-2">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <%= form.label :salary, "Salary " %>
+                    <%= form.number_field :salary,  placeholder: "Enter Your Age ", class:"form-control mt-2", autocomplete: :off %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+            <div class="col-lg-3">
+                <div class="form-group">
+                    <%= form.submit "Update Employee ", class: "btn btn-success mt-2" %>
+                </div>
+            </div>
+        </div>
+
+<% end %>
+</div>
+

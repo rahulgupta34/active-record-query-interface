@@ -19,9 +19,8 @@ class EmailsController < ApplicationController
   end
 
   def create
-    email = params[:email]
-    matchemail = Employee.find_by(email:email)
-    emailExist = matchemail.nil? ? false : true
+    matchemail = Employee.find_by(email:params[:email])
+    emailExist = !matchemail.nil? 
     redirect_to email_path(exist: emailExist)
     
   end
