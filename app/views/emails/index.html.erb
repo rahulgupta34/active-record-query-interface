@@ -1,0 +1,205 @@
+<h1 class="text-center m-2 text-danger">Records For All Employyes Who's age > 20 and < 40 </h1>
+
+<div class="container">
+     <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Age</th>
+            </tr>
+        </thead>
+  <tbody>
+   <% @ages.each do |age| %>
+    <tr>
+      <td scope="row"><%= age.id %></td>
+      <td><%= age.first_name %></td>
+      <td><%= age.last_name %></td>
+      <td><%= age.salary %></td>
+      <td><%= age.age %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h1 class="text-center mt-4 text-success"> 5 List For All Those Emloyee Who's full time available </h1>
+
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Full Time Available</th>
+             </tr>
+        </thead>
+  <tbody>
+   <% @full_time_availables.each do |full_time_available|%>
+    <tr>
+      <td scope="row"><%= full_time_available.id %></td>
+      <td><%= full_time_available.first_name %></td>
+      <td><%= full_time_available.last_name %></td>
+      <td><%= full_time_available.full_time_available %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1 class="text-center mt-4 text-success"> 7 List employees which have exact 5 number of orders and age > 25 </h1>
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Number Of Order</th>
+             </tr>
+        </thead>
+  <tbody>
+  <% @employees.each do |employee| %>
+    <tr>
+      <td scope="row"><%= employee.id %></td>
+      <td><%= employee.first_name %></td>
+      <td><%= employee.age %></td>
+      <td><%= employee.no_of_order %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1 class="text-center mt-4 text-success"> 8 List employees which are created before today </h1>
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Created On</th>
+             </tr>
+        </thead>
+  <tbody>
+  <% @dates.each do |date| %>
+    <tr>
+      <td scope="row"><%= date.id %></td>
+      <td><%= date.first_name %></td>
+      <td><%= date.age %></td>
+      <td><%= date.created_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1 class="text-center mt-4 text-secondary"> 9 List employees which have exact 5 number of orders Or age < 25 </h1>
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Created On</th>
+             </tr>
+        </thead>
+  <tbody>
+  <% @no_of_order_five.each do |no_of_order_five| %>
+    <tr>
+      <td scope="row"><%= no_of_order_five.id %></td>
+      <td><%= no_of_order_five.first_name %></td>
+      <td><%= no_of_order_five.age %></td>
+      <td><%= no_of_order_five.no_of_order %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1 class="text-center mt-4 text-info">  10. List employees in descending order by age </h1>
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Full Time Available</th>
+             </tr>
+        </thead>
+  <tbody>
+  <% @order_by_age.each do |order_by_age| %>
+    <tr>
+      <td scope="row"><%= order_by_age.id %></td>
+      <td><%= order_by_age.first_name %></td>
+      <td><%= order_by_age.age %></td>
+      <td><%= order_by_age.full_time_available %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1 class="text-center mt-4 text-danger">  11. List employees in ascending order by number of order </h1>
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Number Of Order</th>
+             </tr>
+        </thead>
+  <tbody>
+  <% @order_by_no_of_order.each do |order_by_no_of_order| %>
+    <tr>
+      <td scope="row"><%= order_by_no_of_order.id %></td>
+      <td><%= order_by_no_of_order.first_name %></td>
+      <td><%= order_by_no_of_order.age %></td>
+      <td><%= order_by_no_of_order.no_of_order %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1 class="text-center mt-4 text-danger">  12. List employees having salary > 45000 </h1>
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Salary</th>
+             </tr>
+        </thead>
+  <tbody>
+  <% @salarys.each do |salary| %>
+    <tr>
+      <td scope="row"><%= salary.id %></td>
+      <td><%= salary.first_name %></td>
+      <td><%= salary.age %></td>
+      <td><%= salary.salary %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h1 class="text-center mt-4 text-danger">  13. Group employees by no_of_order with them and display employees with no_of_order > 5 </h1>
+<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+           
+            <th scope="col">Number Of Order</th>
+             </tr>
+        </thead>
+  <tbody>
+  <% @group_bys.each do |group_by| %>
+    <tr>
+      <td scope="row"><%= group_by.id %></td>
+      <td><%= group_by.first_name %></td>
+     
+      <td><%= group_by.no_of_order %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
